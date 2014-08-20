@@ -68,9 +68,9 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="24" controlTypeID="com.balsamiq.mockups::DataGrid" x="790" y="184" w="199" h="137" measuredW="159" measuredH="141" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::DataGrid" x="790" y="184" w="199" h="137" measuredW="192" measuredH="141" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Month%2C%20To%20save%0ASeptember%20%2714%2C%20%A3280%0AOctober%20%2714%2C%20%A3210%0ANovember%20%2714%2C%20%A3210%0ADecember%20%2714%2C%20%A390</text>
+        <text>Date%2C%20You%20save..%0A1st%20September%20%2714%2C%20%A3280%0A1st%20October%20%2714%2C%20%A3210%0A1st%20November%20%2714%2C%20%A3210%0A1st%20December%20%2714%2C%20%A390</text>
       </controlProperties>
     </control>
     <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="790" y="127" w="-1" h="-1" measuredW="222" measuredH="48" zOrder="15" locked="false" isInGroup="-1">
