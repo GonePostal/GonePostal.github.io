@@ -42,9 +42,9 @@
               <h3>What big things do you need to save for?</h3>
               <br>        
               <form class = "form-inline" role="form">
-                  <div class = "form-group">
+                  <div class = "form-group-1">
                       <fieldset>
-                      <label for "big thing">1.</label>  
+                      <label for "big thing"></label>  
                       <input type="text" class = "form-control" placeholder="What is it?" id="big_thing"> 
                       &nbsp
                       &nbsp 
@@ -53,27 +53,24 @@
                       &nbsp  
                       <input type="date" class = "form-control" id="when" placeholder = "when" >
                       </fieldset>
+                      <br>
                   </div>
-                  <br>
-                  <br>
-                  <div class = "form-group">
+                  <div class = "form-group-2">
                       <fieldset>
-                      <label for "big thing">2.</label>  
+                      <label for "big thing"></label>  
                       <input type="text" class = "form-control" placeholder="What is it?" id="big_thing"> 
                       &nbsp
                       &nbsp 
                       <input type="number" class = "form-control" placeholder="How much?" id="amount" >
                       &nbsp 
                       &nbsp  
-                      <input type="date" class = "form-control" id="when" placeholder = "when" >
+                      <input type="date" class = "form-control" id="when" placeholder = "when" >  
                       </fieldset>
-                  </div>
+                      <br>
+                      <button type="button" class="btn btn-primary btn-xs" id="another_row">Add another row                             </button>
+                  </div> 
+
                   
-                  <div class>
-                      <br>  
-                      <button type="button" class="btn btn-primary btn-xs" >Add another row </button>
-                  </div>
-              
                   <div class = "form-group">
                       <br> 
                       <h3>Do you have any money saved already?</h3> 
@@ -149,6 +146,16 @@
  </div> 
       
     <script src="javascripts/scale.fix.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        jQuery(function($){
+            var $button = $('#another_row'),
+            $row = $('.form-group-1').clone();
     
+            $button.click(function(){
+            $row.clone().insertBefore( $button );
+            });
+        });
+     </script> 
   </body>
 </html>
