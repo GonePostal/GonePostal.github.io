@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="postal">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -12,7 +12,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="ResultsController as results">
     <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -67,7 +67,7 @@
                       <input type="date" class = "form-control" id="when" placeholder = "when" >  
                       </fieldset>
                       <br>
-                      <button type="button" class="btn btn-primary btn-xs" id="another_row">Add another row                             </button>
+                      <button type="button" class="btn btn-primary btn-xs" id="another_row">Add another row                                                           </button>
                   </div> 
 
                   
@@ -89,39 +89,21 @@
          </div>
          
  
-         <div class="col-md-5" id="results">
-              <h3>Here's what you need to save each month from now:</h3>
-              <table class="table table-striped" align="center"> 
-                  <thead>                    
-                      
+            <div class="col-md-5" id="results">
+                  <h3>Here's what you need to save each month from now:</h3>
+                  <table class="table table-striped" align="center"> 
+                  <thead>   
                       <tr>
                           <th class="col-sm-6">Date</th>
                           <th class="col-sm-3">Amount</th>
                       </tr>
                   </thead>                                
-                  <tr>
-                      <td>1st September 2014</td> 
-                      <td>£280</td>
-                  </tr>
-                  <tr>
-                      <td>1st October 2014</td> 
-                      <td>£210</td>
-                  </tr> 
-                  <tr>
-                      <td>1st November 2014</td> 
-                      <td>£210</td>
-                  </tr>
-                  <tr>
-                      <td>1st December 2014</td> 
-                      <td>£90</td>
-                  </tr>                      
-                  
-                  <tr>
-                      <td>1st January 2015</td> 
-                      <td>£40</td>
-                  </tr> 
-                  
-             </table> 
+                      <tr ng-repeat="item in results.items">
+                          <td>{{item.month}}</td> 
+                          <td>{{item.amount}}</td>
+                      </tr>
+                  </table> 
+             
         
               <div id = "email_notification"> 
               <form class = "form-inline" role="form">
@@ -136,17 +118,21 @@
                    </div> 
                    &nbsp
                    <button type="submit" class="btn btn-default btn-md">Submit</button>
-                    
-                  
+ 
+              </div>
+         
              </div>
-         </div>
+           
+      </div>
+ 
+    </div>     
      
-     </div>
-     
- </div> 
-      
+ 
     <script src="javascripts/scale.fix.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/gone-postal.js"></script>    
+     
     <script>
         jQuery(function($){
             var $button = $('#another_row'),
